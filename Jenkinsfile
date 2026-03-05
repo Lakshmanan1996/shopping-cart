@@ -46,9 +46,9 @@ pipeline {
             steps {
                 cleanWs()
                 unstash 'source-code'
-                dir("${SERVICE_NAME}") {
+                
                     sh "docker build -t ${IMAGE_NAME}:${BUILD_NUMBER} ."
-                }
+                
             }
         }
 
