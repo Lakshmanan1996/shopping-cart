@@ -10,6 +10,8 @@ RUN mvn dependency:go-offline
 
 COPY src ./src
 
+COPY WebContent ./WebContent
+
 RUN mvn clean package -DskipTests
 
 # Runtime stage
